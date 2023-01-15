@@ -4,7 +4,7 @@ exit:
 	@exit 0
 
 clean clear:
-	@find . -name ".DS.Store" -delete
+	@find . -name ".DS.Store" -exec rm -rf {} +
 	@find . -name "__pycache__" -exec rm -rf {} +
 	@find . -name ".vscode" -exec rm -rf {} +
 
