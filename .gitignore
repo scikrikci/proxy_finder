@@ -1,13 +1,24 @@
-exit:
-	@echo -e "\033[1;32mCommand needed: ...\n \ 
-	 >>> make install"
-	@exit 0
+# macbook
+.DS_Store
+**/.DS_Store
 
-clean clear:
-	@find . -name ".DS.Store" -exec rm -rf {} +
-	@find . -name "__pycache__" -exec rm -rf {} +
-	@find . -name ".vscode" -exec rm -rf {} +
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
 
-start:
-	@poetry run start
-	@echo "All proxies found"
+# Secret files
+.vscode/
+.secret/
+
+#development
+test_portal/
+tempstorage/
+.mypy_cache/
+
+# virtualenv and packages
+venv/
+.venv/
+dist/
+requirements.txt
